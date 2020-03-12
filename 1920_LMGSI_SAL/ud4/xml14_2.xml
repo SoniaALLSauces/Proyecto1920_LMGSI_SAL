@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Autor.- Amor Rodríguez Navarro
+ Fecha.- 04/02/2020
+ Documento.- 02.xml
+ Descripción.- Examen  de XML y DTD de la 2º Evaluación
+-->
+<!DOCTYPE catalogo [
+    <!ELEMENT catalogo (portatil*)>
+    <!ELEMENT portatil (referencia,nombre, fabricante, procesador,ram,disco,pantalla,grafica,foto*)>
+     
+    <!ELEMENT referencia (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+   
+    <!ELEMENT fabricante EMPTY>
+    <!ATTLIST fabricante nombre (LENOVO|HP|MSI|APPLE|ASUS|DELL|DESCONOCIDO) #REQUIRED>
+  
+    <!ELEMENT procesador (nombre, cache, numero, velocidad )>
+    <!ELEMENT ram (memoria,tipo)>
+    <!ELEMENT disco (#PCDATA)>
+    <!ATTLIST disco tipo (SSD|HDD) #REQUIRED >
+    <!ATTLIST disco medida (Mb|Gb|Tb) #REQUIRED>
+    <!ELEMENT pantalla (dimension,resolucion,maxresolucion?)>
+    <!ELEMENT dimension (#PCDATA)>
+    <!ELEMENT resolucion (#PCDATA)>
+    <!ELEMENT maxresolucion (#PCDATA)>
+    <!ELEMENT grafica (#PCDATA)>
+    <!ELEMENT foto (#PCDATA)>
+    
+ 
+    <!ELEMENT cache (#PCDATA)>
+    <!ATTLIST cache tamanyo (Mb|Gb|Tb) "Gb">
+	
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT velocidad  (#PCDATA)>
+    <!ATTLIST velocidad medida CDATA #FIXED "Ghz">
+     
+    <!ELEMENT memoria (#PCDATA)>
+    <!ATTLIST memoria unidad (Mb|Gb|Tb) "Gb">
+    <!ELEMENT tipo (#PCDATA)>
+     
+    <!ATTLIST catalogo xmlns:xsi CDATA #IMPLIED
+                       xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+]>
+
+<catalogo>
+    <portatil> 
+        <referencia>HP102219</referencia>
+        <nombre>PORTATIL HP 15-DA0204NS</nombre>
+        <fabricante nombre="HP"/>
+        <procesador>
+            <nombre>Intel Core i3-7020U</nombre>
+            <cache tamanyo="Gb">3</cache>
+            <numero>2</numero>
+            <velocidad>5.3</velocidad>
+        </procesador>
+        <ram>
+            <memoria unidad="Gb">32</memoria>
+            <tipo>DDR3</tipo>
+        </ram>
+        <disco tipo="SSD" medida="Gb">250</disco>
+        <pantalla>
+            <dimension>15.6 pulgadas</dimension>
+            <resolucion>1266x768</resolucion>
+            <maxresolucion>1366x768</maxresolucion>
+        </pantalla>
+        <grafica>Intel UHD Graphics 620</grafica>       
+        <foto>foto1.png</foto>
+        <foto>foto2.png</foto>       
+    </portatil>   
+</catalogo>

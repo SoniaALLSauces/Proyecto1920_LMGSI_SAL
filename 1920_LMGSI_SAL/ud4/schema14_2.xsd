@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 20 de febrero de 2020 -->
+<!-- Documento.- xml14_2.xml -->
+<!-- Descripción.- Schema Examen Amor de XML y DTD de la 2º Evaluación -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+	<!-- Tipos Simples: -->
+<xs:simpleType name="tipoValoresFabricante">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="LENOVO|HP|MSI|APPLE|ASUS|DELL|DESCONOCIDO"/>
+	</xs:restriction>
+</xs:simpleType>
+
+	<!-- Tipos Complejos: -->
+<!-- Declaracion tipoFabricante -->
+<xs:complexType name="tipoFabricante">
+	<xs:atribute name="nombre" type="tipoValoresFabricante">
+	</xs:atribute>	
+</xs:complexType>
+<!-- Declaracion tipoProcesador -->
+<xs:complexType name="tipoProcesador">
+	<xs:sequence>
+		<xs:element name="nombre" type="xs:string"/>
+		<xs:element name="cache" type="tipoCache"/>
+		<xs:element name="numero" type="xs:positiveIngeger"/>
+		<xs:element name="velocidad" type="xs:decimal"/>
+	</xs:sequence>
+</xs:complexType>
+<!-- Declaracion tipoCache de tipoProcesador -->
+<xs:complexType name="tipoCache">
+	<xs:simpleContent>
+		<xs:extension base="xs:positiveInteger">
+			<xs:attribute name="tamanyo" type="xs:string"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+<!-- Declaracion tipoRam -->
+<xs:complexType name="tipoRam">
+	<xs:sequence>
+		<xs:element name="memoria" type="tipoMemoria"/>
+		<xs:element name="tipo" type="xs:string"/>
+	</xs:sequence>
+</xs:complexType>
+<!-- Declaracion tipoMemoria de tipoRam -->
+<xs:complexType name="tipoMemoria">
+	<xs:simpleContent>
+		<xs:extension base="xs:positiveInteger">
+			<xs:attribute name="unidad" type="xs:string"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+<!-- Declaracion tipoDisco -->
+<xs:complexType name="tipoDisco">
+	<xs:simpleContent>
+		<xs:extension base="xs:positiveInteger">
+			<xs:attribute name="tipo" type="xs:string"/>
+			<xs:attribute name="medida" type="xs:string"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+<!-- Declaracion tipoPantalla -->
+<xs:complexType name="tipoPantalla">
+	<xs:sequence>
+		<xs:element name="dimension" type="xs:string"/>
+		<xs:element name="resolucion" type="xs:string"/>
+		<xs:element name="maxresolucion" type="xs:string" minOccurs="0"/>
+	</xs:sequence>
+</xs:complexType>
+
+
+	<xs:element name="catalogo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="portatil" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="referencia" type="xs:string"/>
+							<xs:element name="nombre" type="xs:string"/>
+							<xs:element name="fabricante" type="tipoFabricante"/>
+							<xs:element name="procesador" type="tipoProcesador"/>
+							<xs:element name="ram" type="tipoRam"/>
+							<xs:element name="disco" type="tipoDisco"/>
+							<xs:element name="pantalla" type="tipoPantalla"/>
+							<xs:element name="pantalla" type="xs:string"/>
+							<xs:element name="foto" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

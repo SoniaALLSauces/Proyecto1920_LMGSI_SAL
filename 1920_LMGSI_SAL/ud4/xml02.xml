@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 16 de enero de 2020 -->
+
+<!-- Enunciado ejercicio -->
+<!-- continente-> Europa,America,Asia -->
+<!-- pais-> Alemania,Argentina,Bahamas,Afganistan,Arabia Saudita -->
+<!-- capital-> Berlin,Buenos Aires,Nassau,Kabul,Riad -->
+
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE mundo [
+	<!ELEMENT nombrecontinente (#PCDATA)>
+	<!ELEMENT nombrepais (#PCDATA)>
+	<!ELEMENT capital (#PCDATA)>
+	<!ELEMENT pais (nombrepais, capital)>
+	<!ELEMENT continente (nombrecontinente, pais+)>
+	<!ELEMENT mundo (continente+)>
+	<!ATTLIST mundo xmlns:xsi CDATA #IMPLIED
+				    xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+]>
+
+
+<mundo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="schema02.xsd">
+	<continente>
+		<nombrecontinente>Europa</nombrecontinente>
+		<pais>
+			<nombrepais>Alemania</nombrepais>
+			<capital>Berlin</capital>
+		</pais>
+	</continente>
+	<continente>
+		<nombrecontinente>América</nombrecontinente>
+		<pais>
+			<nombrepais>Argentina</nombrepais>
+			<capital>Buenos Aires</capital>
+		</pais>
+		<pais>
+			<nombrepais>Bahamas</nombrepais>
+			<capital>Nassau</capital>
+		</pais>
+	</continente>
+	<continente>
+		<nombrecontinente>Asia</nombrecontinente>
+		<pais>
+			<nombrepais>Afganistán</nombrepais>
+			<capital>Kabul</capital>
+		</pais>
+		<pais>
+			<nombrepais>Arabia Saudita</nombrepais>
+			<capital>Riad</capital>
+		</pais>
+	</continente>
+</mundo>

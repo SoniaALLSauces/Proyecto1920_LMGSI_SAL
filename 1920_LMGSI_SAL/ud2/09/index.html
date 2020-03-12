@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Autor.- 
+fecha .-
+Ejercicio.-
+-->
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nombre y apellidos">
+        <meta name="application-name" content="Sitio web de una tienda virtual">
+        <meta name="description" content="Plantilla que describe lo que debe contener una pagina web">
+        <meta name="keywords" content="analítica web, seo, web semántica, seo semántico, analytics" >
+        <!-- Recomendado 5 o 8 palabras clave, Cada palabra clave puede estar constituida por hasta 4 o 5 palabras. -->
+        <meta name="robots" content="index, follow" />
+       
+        <link href="css/reset.css"   rel="stylesheet"         type="text/css" >
+        <link href="css/estilo.css"  rel="stylesheet"         type="text/css" title="Default style">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <title>CSS 09- Sonia Antón Llanes</title>
+        <style>
+			body{background-color: orange;
+				background-image:url("images/calabaza.png");
+				background-size:125px;
+				background-repeat:no-repeat;
+				background-position:right bottom;
+				background-attachment:fixed;}
+			
+			#art1 div {display:inline-block}
+			#art2 div {display:inline-block}
+			
+			div.caja1{background-color:yellowgreen;
+				width:180px; height:180px;
+				margin:5px;
+				border:10px dotted green}
+			div.caja1{background-image:url("images/kiwi.png");
+					  background-size:180px}
+			div.caja1:hover{background-image:url("images/kiwi.png");
+							background-size:60px}
+							
+			div.caja2{background-color:green;
+				width:180px; height:180px;
+				margin:5px;
+				border:10px double yellowgreen}
+			div.caja2{background-image:url("images/apple.png");
+					  background-size:60px}
+			div.caja2:hover{background-image:url("images/apple.png");
+							background-size:180px}					  
+					  
+			div.caja3{width:180px; height:180px;
+				margin:5px;
+				border:10px outset green}
+			div.caja3{background-image:url("images/melon.png");
+					  background-size:60px;
+					  background-repeat:no-repeat;}
+			div.caja3:hover{background: url("images/melon.png") no-repeat fixed left top;
+							background: url("images/kiwi.png") no-repeat fixed right top;
+							background: url("images/apple.png") no-repeat fixed right bottom;}
+							
+        </style>
+    </head>
+    <body>
+		<article id="art1">
+            <div class="caja1">	</div>    
+            <div class="caja2">	</div>  
+            <div class="caja3">	</div> 
+		</article>
+		<article id="art2">
+            <div class="caja1">	</div>    
+            <div class="caja2">	</div>  
+            <div class="caja3">	</div> 
+		</article>
+            <div> </div>
+            <div> </div>
+        
+    </body>
+</html>

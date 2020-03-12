@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Enunciado ejercicio -->
+<!-- xml10: Almacenar información sobre un grupo de estudiantes, por cada estudiante
+almacenamos: nombre del estudiante y código del estudiante. 
+Además, cada estudiante puede tener 0,1 o 2 tutores, que además son estudiantes.-->
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE Grupo [
+	<!ELEMENT Grupo (estudiante+)>
+	<!ELEMENT estudiante (nombre)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ATTLIST estudiante codigo ID #REQUIRED>
+	<!ATTLIST estudiante codtutor IDREFS #IMPLIED>
+]>
+
+
+<Grupo>
+	<estudiante codigo="E01" codtutor="E02">	
+		<nombre>Sonia Antón Llanes</nombre>
+	</estudiante>
+	<estudiante codigo="E02">
+		<nombre>Susana Fabian Anton</nombre>
+	</estudiante>
+	<estudiante codigo="E03" codtutor="E01 E02">
+		<nombre>Elena de Anton</nombre>
+	</estudiante>
+</Grupo>
+

@@ -1,0 +1,55 @@
+/* 
+ Autor.- Susana Fabián Antón
+ Fecha.- 01/12/19
+ Ejercicio.- UD2_013
+ Documento.- estilo.css
+ */
+body{
+	font-family:calibri,arial,sans-serif;
+	background-image:url(../images/Le_petit_prince.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	background-size:250px;
+	margin-right:250px;
+}
+h1{
+	color:red;
+	background-color:#FFA500;
+}
+h2{
+	color:crimson;
+}
+caption{
+	color:green;
+	caption-side:bottom;
+	font-style:italic;
+	font-variant:small-caps;
+}
+.tabla1{
+	border-collapse:collapse;
+	margin:auto;
+}
+.tabla1 th,.tabla1 td{
+	border-bottom:1px solid #DDD;
+	padding:5px;
+}
+.tabla2{
+	font-family:verdana,tahoma;
+	font-size:0.875em;
+	border-collapse:collapse;
+}
+.tabla2 tr:nth-child(2n+1){
+	background-color:#F5F5F5;
+}
+.tabla2 tr:nth-child(2n){
+	background-color:#E0FFFF;
+}
+.tabla2 td,.tabla2 th{
+	border:1px solid #DDD;
+	padding:5px;
+}
+.tabla2 th{
+	color:white;
+	background-color:mediumseagreen;
+	vertical-align:bottom;
+}

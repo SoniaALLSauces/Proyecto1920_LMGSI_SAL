@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 16 de enero de 2020 -->
+
+<!-- Enunciado ejercicio -->
+<!-- Hechos Históricos -->
+<!-- descripción-> Se funda Youtube en la Fecha-> dia: 15, mes: 2, año: 2005 -->
+<!-- descripción-> Se funda Google en la Fecha-> dia: 4, mes: 9, año: 1998 -->
+<!-- descripción-> Se funda Facebook en la Fecha-> dia: 4, mes: 2, año: 2004 -->
+
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE hechoshistoricos [
+	<!ELEMENT hecho (#PCDATA)>
+	<!ELEMENT dia (#PCDATA)>
+	<!ELEMENT mes (#PCDATA)>
+	<!ELEMENT año (#PCDATA)>	
+	<!ELEMENT fecha (dia, mes, año)>
+	<!ELEMENT descripcion (hecho, fecha)>
+	<!ELEMENT hechoshistoricos (descripcion+)>
+	<!ATTLIST mundo xmlns:xsi CDATA #IMPLIED
+				    xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+]>
+
+
+<hechoshistoricos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="schema03.xsd">
+	<descripcion>
+		<hecho>Se funda Youtube</hecho>
+		<fecha>
+			<dia>15</dia>
+			<mes>02</mes>
+			<año>2005</año>
+		</fecha>
+	</descripcion>
+	<descripcion>
+		<hecho>Se funda Google</hecho>
+		<fecha>
+			<dia>04</dia>
+			<mes>09</mes>
+			<año>1998</año>
+		</fecha>
+	</descripcion>
+	<descripcion>
+		<hecho>Se funda Facebook</hecho>
+		<fecha>
+			<dia>04</dia>
+			<mes>02</mes>
+			<año>2004</año>
+		</fecha>
+	</descripcion>
+</hechoshistoricos>

@@ -1,0 +1,103 @@
+﻿
+/* 
+    Created on : 05-dic-2019, 19:10:50
+    Author     : Sonia Anton Llanes
+	Practica   : 17
+   
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+body{
+	background-color: cornsilk;
+	text-align: justify;
+	width: 1024px;
+	margin-left: 0px auto;
+}
+
+header h1{
+	color: DarkGreen;
+	text-align: center;
+	letter-spacing: 3px;
+	margin: 20px;
+}
+
+nav{
+	background-color: Orange;
+	text-align: center;
+	margin: 5px;
+}
+nav li{
+	display: inline-block;
+	padding: 15px;
+}
+nav a{
+	color: OliveDrab;
+	font-weight: bold;
+}
+nav a:hover{
+	color: white;
+}
+
+header h2{
+	border-bottom: 2px solid green;
+}
+header h2 a{
+	color: DarkGreen;
+	margin-left: 2px;
+}
+
+header h3 a{
+	color: LimeGreen;
+}
+
+header h4{
+	color: GreenYellow;
+}
+
+section{
+	position: relative;
+}
+article{
+	position: relative;
+}
+article header{
+	position: absolute;
+	right: 0px;
+	width: 75%;
+}
+article div{
+	position: relative;
+}
+div figure{
+	position: relative;
+	left: 0px;
+	width: 18%;
+	border: 2px solid darkgrey;
+	margin: 10px;
+	margin-left: 1px;
+	padding: 10px;
+}
+article blockquote{
+	position: relative;
+	float: right;
+	width: 75%;
+}
+
+article footer{
+	position: relative;
+	left: 80%;	
+	width: 20%;
+	text-align: right;
+	background-color: grey;
+}
+
+

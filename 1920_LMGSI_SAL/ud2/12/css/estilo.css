@@ -1,0 +1,97 @@
+
+/* 
+    Created on : 27-nov-2019, 19:10:50
+    Author     : Sonia Antón Llanes
+    Colores utilizados: https://www.w3schools.com/colors/colors_groups.asp
+*/
+
+body{
+	font-family:calibri,arial,sans-serif;
+	background-image:url(../images/Le_petit_prince.png);
+	background-size:33%;
+	background-position:top right;
+	background-repeat:no-repeat;
+	margin-right:33%;
+}
+
+h1{
+	font-variant:small-caps;
+	color:darkred;
+	text-transform:capitalize;
+	text-decoration:underline;
+}
+
+p{
+	background-color:crimson;
+	font-style:italic;
+}
+
+p:first-letter{
+	font-size:1.3em;
+}
+
+span{
+	color:white;
+}
+
+.lista1{
+	list-style-type:circle;
+	list-style-position:inside;
+}
+
+.lista2{
+	list-style-type:square;
+}
+
+.lista3{
+	list-style-image:url(../images/sqpurple.png);
+	list-style-position:inside;
+}
+
+.lista4{
+	background-color:lightsalmon;
+	border:5px dashed darkred;
+	color:lightsalmon;
+	list-style:none;
+	padding:10px;
+}
+
+.lista4 li{
+	background-color:darkred;
+	margin:10px;
+	padding:5px;
+}
+
+.lista4 li:before{
+	content:" • ";
+	color:darkred;
+	margin-left:-1em;
+}
+
+.lista5{
+	background-color:lightsalmon;
+	border-left:10px solid darkred;
+	padding:5px;
+	list-style:none;
+	color:darkred;
+}
+
+.lista6{
+	list-style:none;
+	color:darkred;
+	padding:5px;
+}
+
+.lista6 li{
+	border-top:1px dotted darkred;
+	border-bottom:0.5px solid lightgray;
+	border-left:0.5px solid lightgray;
+	padding:5px;
+}
+
+.lista6 li~li{
+	border-top:none;
+	border-bottom:1px dotted darkred;
+	border-left:1px dotted darkred;
+	padding:5px;
+}

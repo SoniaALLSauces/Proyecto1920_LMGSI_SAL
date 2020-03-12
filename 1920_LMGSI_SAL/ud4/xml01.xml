@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 14 de enero de 2020 -->
+
+<!-- Enunciado ejercicio -->
+<!-- remitente-> marodriguez@educa.jcyl.es -->
+<!-- destinatarios-> eduardo@educa.jcyl.es, maria@educa.jcyl.es -->
+<!-- asunto-> Fiesta de fin de curso -->
+<!-- imagen-> nombre imagen, y tipo -->
+<!-- fecha-> 14 de 01 de 2020 -->
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE mail [ 
+	<!ELEMENT fecha (#PCDATA)> 
+	<!ELEMENT remitente (#PCDATA)> 
+	<!ELEMENT correo (#PCDATA)> 
+	<!ELEMENT asunto (#PCDATA)> 
+	<!ELEMENT mensaje (#PCDATA)> 
+	<!ELEMENT tipo (#PCDATA)> 
+	<!ELEMENT nombre (#PCDATA)> 
+	<!ELEMENT destinatario (email+)> 
+	<!ELEMENT image (tipo, nombre)> 
+	<!ELEMENT adjuntos (image*)> 
+	<!ELEMENT mail (fecha, remitente, destinatario, asunto?, mensaje, adjuntos?)> 
+	<!ATTLIST mail xmlns:xsi CDATA #IMPLIED
+				   xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+]>
+
+
+<mail xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="schema01.xsd">
+	<fecha>2020-01-14</fecha>
+	<remitente>marodriguez@educa.jcyl.es</remitente>
+	<destinatario>
+		<correo>eduardo@educa.jcyl.es</correo>
+		<correo>maria@educa.jcyl.es</correo>
+	</destinatario>
+	<asunto>Fiesta de fin de curso</asunto>
+	<mensaje>A las 20:00 en.....</mensaje>
+	<adjuntos>
+		<!-- <image type="image/png">foto1.png</image> -->
+		<image>
+			<tipo>image/png</tipo>
+			<nombre>foto1.png</nombre>
+		</image>
+		<!-- <image type="image/png">foto2.png</image> -->
+		<image>
+			<tipo>image/png</tipo>
+			<nombre>foto2.png</nombre>
+		</image>		
+	</adjuntos>
+</mail>

@@ -1,0 +1,102 @@
+﻿
+/* 
+    Created on : 05-dic-2019, 19:10:50
+    Author     : Sonia Anton Llanes
+	Practica   : 16
+   
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+body{
+	background-color: cornsilk;
+	font-family: calibri, arial, sans-serif;
+	text-align: justify;
+}
+
+.topmenu{
+	background-color: DarkSeaGreen;
+}
+.topmenu li{
+	display: inline-block;
+	padding: 10px 0px;
+}
+.topmenu a{
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.topmenu li:hover{
+	background-color: lightgray;
+}
+.active{
+	background-color: lightgreen;
+	color: white;
+	padding: 10px;
+}
+
+.header h1{
+	margin: 10px;
+	background-color: lightgreen;
+	color: brown;
+	font-variant: small-caps;
+	font-style: italic;
+	text-transform: capitalize;
+	text-align: center;
+	word-spacing: 5px;
+	padding: 10px;
+}
+
+article h2{
+	color: brown;
+	font-variant: small-caps;
+	letter-spacing: 5px;
+	padding: 10px;
+}
+
+article p{
+	padding: 5px 0;
+}
+
+.column{
+	float: left;
+}
+
+.sidemenu{
+	width: 23%;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+.sidemenu a{
+	display:block;
+	background-color: burlywood;
+	color: brown;
+	margin: 5px;
+	padding: 10px;
+}
+.sidemenu a:hover{
+	background-color: chocolate;
+	color: burlywood;
+}
+
+.content{
+	width: 73%;
+}
+
+footer{
+	background-color: DarkSeaGreen;
+	color: white;
+	margin: 40px 5px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+

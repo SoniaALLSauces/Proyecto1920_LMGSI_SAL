@@ -1,0 +1,121 @@
+/* 
+    Created on : 27-dic-2019, 19:10:50
+    Author     : Sonia Anton Llanes
+	Practica   : Pagina Web
+   
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header{
+	position: fixed;
+	top: 0%;
+	margin-bottom: 100px;
+	width: 100%;
+	z-index: ;
+}
+h2{
+	background-color: white;
+}
+h1{
+	background-color: #E33B27;
+	color: white;
+	text-align: center;
+	padding: 30px;
+	padding-bottom: 40px;
+	margin-bottom: 142px;
+}
+
+nav{
+	position: relative;
+	margin-top: 142px;
+	margin-left: 10px;
+}
+nav li{
+	display: inline;
+	border: 3px solid #BF2411;
+	padding: 10px 30px;	
+	padding-top: 28px;
+}
+nav li a{
+	display: inline-block;
+	width: 13%;
+	font-size: xx-large;
+	font-weight: bolder;
+	color: #BF2411;
+}
+nav ul li:hover{
+	background-color: #BF2411;
+}
+nav ul li a:hover{
+	color: white;
+}
+.home{
+	width: 3%;
+}
+.activo{
+	background-color: #BF2411;
+	color: white;
+}
+
+main{
+	margin-top: 7px;
+	padding-top: 10px;
+	padding-left: 10%;
+	padding-bottom: 70px;
+	background-color: #FDAEA5;
+	height: 100%;
+}
+section{
+	float: left;	
+}
+.icono{
+	width: 25%;
+}
+.presentacion{
+	width: 60%;
+	margin: 3% 5%;
+}
+main article{
+	display: inline-block;
+	width: 20%;
+	border: 2px solid #BF2411;
+	margin: 0px 10px 20px 10px;
+	background-color: white;
+}
+main article div{
+	margin: 20px;
+	text-align:center;
+	
+}
+main article div p{
+	color:#BF2411;
+}
+.imagen{
+	border-bottom: 2px solid #BF2411;
+	padding-bottom: 20px;
+}
+
+footer{
+	background-color: #E33B27;
+	color: white;
+	position: fixed;
+	bottom: 0%;
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+	margin-top: 70px;
+}
+
+
+
+
+
+

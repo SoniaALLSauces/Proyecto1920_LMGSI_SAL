@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 13 de febrero de 2020 -->
+
+<!-- Enunciado ejercicio -->
+<!-- Uso de todos los elementos de libre eleccion -->
+
+
+<floristeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="schema15.xsd">
+	<pedido>
+		<fecha>2020-02-13</fecha>
+		<numeropedido>01</numeropedido>
+		<cliente nombre="Faustino Gomez">71200423</cliente>
+		<envio_benavente/>
+		<direccion>c/ Maragatos, 4</direccion>
+		<codigopostal/>
+		<telefono>654321987</telefono>
+		<regalo/>
+	</pedido>
+	<pedido>
+		<fecha>2020-02-18</fecha>
+		<numeropedido>02</numeropedido>
+		<cliente nombre="Margarita Perez">11452865</cliente>
+		<envio_benavente/>false</envio_benavente/>
+		<direccion>avd/ Los Fresnos, 14</direccion>
+		<codigopostal>49100</codigopostal>
+		<telefono>698745213</telefono>
+		<regalo/>
+	</pedido>
+</floristeria>

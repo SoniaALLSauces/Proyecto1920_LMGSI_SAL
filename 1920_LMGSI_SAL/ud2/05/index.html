@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- Autor: Sonia Antón Llanes -->
+<!-- Fecha 24/10/2019 -->
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML 05 Sonia Antón Llanes</title>
+	</head>
+	
+	<body>
+		<h1>FLORISTERIA 'Mis Plantas'</h1>
+		<h3>Formulario de Adquisición</h3>
+		<form action="#" method="get">
+<!-- He creado una floristeria para poder introducir input tipo tel, email, URL, date, time, ... -->
+			<fieldset>
+				<legend>Proveedor</legend>
+				<div>
+					<label for="LblNombreProv">Nombre del Proveedor
+						<input type="text" name="nombreProveedor" id="LblNombreProv" placeholder="nombre proveedor" size="40">
+					</label>
+				</div>
+				<div>
+					<label for="LblDireccion">Dirección
+						<input type="text" name="direccion" id="LblDireccion" placeholder="dirección completa" size="50">
+					</label>
+				</div>
+				<div>
+					<label for="LblTel">Teléfono de contacto:
+						<input type="tel" name="telefono" id="LblTel" pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{3}" title="Teléfono valido con formato 000-000-000" placeholder="000-000-000" required>
+					</label>
+				</div>
+				<div>
+					<label for="LblCorreo">Correo electrónico
+						<input type="email" name="email" id="LblCorreo" placeholder="email" size="30">
+					</label>
+				</div>
+				<div>
+					<label for="LblUrl">URL
+						<input type="url" name="direccion" id="LblUrl" placeholder="URL" size="40">
+					</label>
+				</div>
+				<div>
+					<label for="LblFecha">Fecha de entrega
+						<input type="date" name="fecha" min="2013-01-01" value="2013-01-01" id="LblFecha">
+					</label>
+				</div>
+				<div>
+					<label for="LblHora">Hora de entrega
+						<input type="time" name="hora" value="08:00" id="LblHora">
+					</label>
+				</div>
+			</fieldset>
+<!-- Utilizo el tipo text para tomar los datos de la planta -->
+			<fieldset>
+				<legend>Datos de la Planta</legend>
+				<div>
+					<label for="LblNombre">Nombre Común
+						<input type="text" name="nombre" id="LblNombre" placeholder="nombre comun de la planta" size="40">
+					</label>
+				</div>
+				<div>
+					<label for="LblNCientifico">Nombre Científico
+						<input type="text" name="cientifico" id="LblNCientifico" placeholder="nombre cientifico" size="40">
+					</label>
+				</div>
+				<div>
+					<label for="LblEspecie">Especie
+						<input type="text" name="especie" id="LblEspecie" placeholder="especie">
+					</label>
+					<label for="LblFamilia">de la Familia
+						<input type="text" name="familia" id="LblFamilia" placeholder="familia">
+					</label>
+				</div>
+<!-- utilizo el tipo search para buscar el lugar de origen de la planta -->
+				<div>
+					<label for="LblOrigen">Origen
+						<input type="search" name="origen" id="LblOrigen" placeholder="lugar de origen" size="30">
+					</label>
+				</div>
+			</fieldset>
+<!-- Utilizo el tipo radio para clasificar el tipo de planta, -->
+			<fieldset>
+				<legend>Clasificación</legend>
+				Tipo de planta según el tallo
+				<div>
+					<label for="LblArbol">
+						<input type="radio" name="tipo" id="LblArbol" value="A">Árbol
+					</label>
+					<label for="LblArbusto">
+						<input type="radio" name="tipo" id="LblArbusto" value="a">Arbusto
+					</label>
+					<label for="LblHierba">
+						<input type="radio" name="tipo" id="LblHierba" value="H">Hierba
+					</label>
+				</div>
+				<div>
+					<input type="image" src="images/tipos_plantas.jpg" name="tipos" alt="Tipos de Plantas" height="200" width="300">
+				</div>
+				Tipo de planta según su hoja
+				<div>
+					<label for="LblPerenne">
+						<input type="radio" name="tipohoja" id="LblPerenne" value="A">Hola Perenne
+					</label>
+					<label for="LblCaduca">
+						<input type="radio" name="tipohoja" id="LblCaduca" value="a">Hoja Caduca
+					</label>
+				</div>
+			</fieldset>
+<!-- utilizo el elemento select para indicar el tipo de hoja que tiene -->
+			<fieldset>
+			<legend>Tipo de Hoja</legend>
+				<div>
+					<label for="LblBorde">Segun el borde
+						<select name="Borde" id="LblBorde" size="1">
+							<option value="lisa">Lisa</option>
+							<option value="dentada">Dentada</option>
+							<option value="lobulada">Lobulada</option>
+						</select>
+					</label>
+				</div>
+				<div>
+					<label for="LblForma">Segun la forma
+						<select name="Forma" id="LblForma" size="1">
+							<option value="lineal">Lineal</option>
+							<option value="acorazada">Acorazada</option>
+							<option value="lanceolada">Lanceolada</option>
+							<option value="acicular">Acicular</option>
+							<option value="redondeada">Redondeada</option>
+							<option value="ovalada">Ovalada</option>
+							<option value="palmeada">Palmeada</option>
+						</select>
+					</label>
+				</div>
+			</fieldset>
+<!-- Utilizo el tipo checkbox para indicar otras características de las plantas -->
+			<fieldset>
+				<legend>Otras Características</legend>
+				<div>
+					<label for="LblMedicinal">
+						<input type="checkbox" name="medicinal" id="LblMedicinal" value="si">Medicinal     
+					</label>
+				</div>	
+				<div>
+					<label for="LblComestible">
+						<input type="checkbox" name="comestible" id="LblComestible" value="si">Fruto Comestible
+					</label>
+				</div>
+				<div>
+					<label for="LblOrnamental">
+						<input type="checkbox" name="ornamental" id="LblOrnamental" value="si">Ornamental  
+					</label>
+				</div>
+				<div>
+					<label for="LblAromatica">
+						<input type="checkbox" name="aromatica" id="LblAromatica" value="si">Aromática
+					</label>
+				</div>
+				<div>
+					<label for="LblTrepadora">
+						<input type="checkbox" name="trepadora" id="LblTrepadora" value="si">Trepadora     
+					</label>
+				</div>
+				<div>
+					<label for="LblVenenosa">
+						<input type="checkbox" name="venenosa" id="LblVenenosa" value="si">Venenosa
+					</label>
+				</div>
+			</fieldset>
+<!-- Utilizo el tipo rango para definir la cantidad de riego,luz y temperatura que necesitan -->
+			<fieldset>
+				<div>
+					<label for="LblRiego">Frecuencia de Riego<br>Poco
+						<input type="range" id="LblRiego" name="riego" min="0" max="5" value="2" step="1" list="lista">Abundante
+					</label>
+				</div>
+				<div>
+				<br>
+					<label for="LblLuz">Cantidad de Luz<br>Sol Directo
+						<input type="range" id="LblLuz" name="luz" min="0" max="5" value="2" step="1" list="lista">Semisombra
+					</label>
+				</div>
+				<div>
+				<br>
+					<label for="LblTemperatura">Temperatura<br>Calor
+						<input type="range" id="LblTemperatura" name="temperatura" min="0" max="5" value="2" step="1" list="lista">Frío
+					</label>
+				</div>
+				<datalist id="lista">
+					<option value="0" label="0">
+					<option value="1" label="1">
+					<option value="2" label="2">
+					<option value="3" label="3">
+					<option value="4" label="4">
+					<option value="5" label="5">
+				</datalist>
+			</fieldset>
+<!-- Construyo un area de texto para observaciones -->
+			<fieldset>
+				<legend>Observaciones</legend>
+				<div>
+					<label for="LblObservaciones">Observaciones:<br>
+						<textarea name="observaciones" rows="3" cols="60" id="LblObservaciones">Escribe texto</textarea>
+					</label>
+				</div>
+			</fieldset>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Borrar">
+		</form>
+	</body>
+</html>

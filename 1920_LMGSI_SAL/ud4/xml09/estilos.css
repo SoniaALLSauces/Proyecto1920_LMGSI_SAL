@@ -1,0 +1,15 @@
+/* Estilo de la practica xml09 */
+
+
+*{
+	white-space: pre;
+}
+
+codigo::after{
+	content:'\A';
+	white-space:pre;
+}
+
+lenguaje{
+	color: red;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Enunciado ejercicio -->
+<!-- xml08: Escribir documento XML que represente la estructura y almacene tus datos personales -->
+<!-- teniendo en cuenta que cuando creo la compañia puedo no tener empleados -->
+<!-- que Email puedo tener 0 o más de uno -->
+<!-- que telefono puedo tener 1 o más de uno -->
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE Company [
+	<!ELEMENT Company (Employee*)>
+	<!ELEMENT Employee (FirstName, LastName, ContactNo+, Email*, Address)>
+	<!ELEMENT FirstName (#PCDATA)>
+	<!ELEMENT LastName (#PCDATA)>
+	<!ELEMENT ContactNo (#PCDATA)>
+	<!ELEMENT Email (#PCDATA)>
+	<!ELEMENT Address (City,State,Zip)>
+	<!ELEMENT City (#PCDATA)>
+	<!ELEMENT State (#PCDATA)>
+	<!ELEMENT Zip (#PCDATA)>
+]>
+
+
+<Company>
+	<Employee>
+		<FirstName>Sonia</FirstName>
+		<LastName>Anton Llanes</LastName>
+		<ContactNo>666.666.666</ContactNo>
+		<Email>sosnyfvd@gmail.com</Email>
+		<Address>
+			<City>Benavente</City>
+			<State>Zamora</State>
+			<Zip>49600</Zip>
+		</Address>
+	</Employee>
+</Company>

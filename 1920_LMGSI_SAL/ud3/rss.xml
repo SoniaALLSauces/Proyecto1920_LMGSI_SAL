@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0.">
+	<channel>
+		<title>Sonia Anton Llanes</title>
+		<link>http://192.168.2.102</link>
+		<description>Sitio web de Sonia Anton Llanes de LMSGI</description>
+		<item>
+			<title>Practica 13</title>
+			<link></link>
+			<description>El Principito. Los libros más vendidos: descripcion</description>
+		</item>
+		<item>
+			<title>Practica 14</title>
+			<link></link>
+			<description>El Principito. Los libros más vendidos: enlaces</description>
+		</item>
+		<item>
+			<title>Practica 15</title>
+			<link></link>
+			<description>El Principito. Posicionamientos</description>
+		</item>
+		<item>
+			<title>Practica 16</title>
+			<link></link>
+			<description>El Principito. Los libros más vendidos: resumen</description>
+		</item>
+		<item>
+			<title>Practica 17</title>
+			<link></link>
+			<description>HTML Noticias. Posicionamientos</description>
+		</item>
+	</channel>
+</rss>

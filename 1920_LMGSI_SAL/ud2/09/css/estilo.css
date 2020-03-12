@@ -1,0 +1,40 @@
+﻿body{
+	background-color: orange;
+	background-image:url("../images/calabaza.png");
+	background-size:125px;
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	background-attachment:fixed;}
+			
+#art1 div {display:inline-block}
+#art2 div {display:inline-block}
+			
+div.caja1{background-color:yellowgreen;
+		width:180px; height:180px;
+		margin:5px;
+		border:10px dotted green}
+div.caja1{background-image:url("images/kiwi.png");
+		background-size:180px}
+div.caja1:hover{background-image:url("images/kiwi.png");
+				background-size:60px}
+							
+div.caja2{background-color:green;
+		width:180px; height:180px;
+		margin:5px;
+		border:10px double yellowgreen}
+div.caja2{background-image:url("images/apple.png");
+		background-size:60px}
+div.caja2:hover{background-image:url("images/apple.png");
+				background-size:180px}					  
+					  
+div.caja3{width:180px; height:180px;
+		margin:5px;
+		border:10px outset green}
+div.caja3{background-image:url("images/melon.png");
+		background-size:60px;
+		background-repeat:no-repeat;}
+div.caja3:hover{background: url("images/melon.png") 60px no-repeat fixed left top ;
+				background: url("images/kiwi.png") 60px no-repeat fixed right top;
+				background: url("images/apple.png") 60px no-repeat fixed right bottom;}
+
+							

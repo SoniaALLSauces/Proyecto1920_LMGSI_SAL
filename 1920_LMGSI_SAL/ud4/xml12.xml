@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Enunciado ejercicio -->
+<!-- xml12: Declarar tres entidades internas:
+escritor “Miguel de Cervantes
+obra “El Quijote”
+fecha “29/09/1947”
+Se pide escribir un documento XML se visualizase el siguiente texto abriendo el documento en el navegador y escribe el DTD
+que lo valide.:-->
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE textos [
+	<!ENTITY escritor "Miguel de Cervantes">
+	<!ENTITY obra "El Quijote">
+	<!ENTITY fecha "29/09/1947">
+	<!ELEMENT texto (#PCDATA)>
+	<!ELEMENT textos (texto)+>
+]>
+
+
+<textos>
+	<texto>&obra; fue escrito por &escritor;</texto>
+	<texto>&escritor; nació el &quot;&fecha;&quot;</texto>
+</textos>

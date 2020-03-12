@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Enunciado ejercicio -->
+<!-- xml07: - Escribir un documento XML que almacene la información de tu horario escolar.-->
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE HorarioEscolar [
+	<!ELEMENT dia (Hora+)>
+	<!ELEMENT Hora (horaInicio,horaFin,asignatura)>
+	<!ELEMENT horaInicio (#PCDATA)>
+	<!ELEMENT horaFin (#PCDATA)>
+	<!ELEMENT asignatura (#PCDATA)>	
+	<!ELEMENT HorarioEscolar (dia+)>
+	<!ATTLIST dia diasemana CDATA #REQUIRED>
+]>
+
+
+<HorarioEscolar>
+	<dia diasemana="Lunes">
+		<Hora>
+			<horaInicio>08:30</horaInicio>
+			<horaFin>09:20</horaFin>
+			<asignatura>Entornos de Desarrollo</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>09:20</horaInicio>
+			<horaFin>10:10</horaFin>
+			<asignatura>Formación y Orientación Laboral</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>10:10</horaInicio>
+			<horaFin>11:00</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>11:25</horaInicio>
+			<horaFin>12:15</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>12:15</horaInicio>
+			<horaFin>13:05</horaFin>
+			<asignatura>Sistemas Informáticos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>13:05</horaInicio>
+			<horaFin>13:55</horaFin>
+			<asignatura>Sistemas Informáticos</asignatura>
+		</Hora>		
+	</dia>
+	<dia diasemana="Martes">
+		<Hora>
+			<horaInicio>08:30</horaInicio>
+			<horaFin>09:20</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>09:20</horaInicio>
+			<horaFin>10:10</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>10:10</horaInicio>
+			<horaFin>11:00</horaFin>
+			<asignatura>LMSGI</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>11:25</horaInicio>
+			<horaFin>12:15</horaFin>
+			<asignatura>LMSGI</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>12:15</horaInicio>
+			<horaFin>13:05</horaFin>
+			<asignatura>Bases de Datos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>13:05</horaInicio>
+			<horaFin>13:55</horaFin>
+			<asignatura>Bases de Datos</asignatura>
+		</Hora>		
+	</dia>
+	<dia diasemana="Miércoles">
+		<Hora>
+			<horaInicio>08:30</horaInicio>
+			<horaFin>09:20</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>09:20</horaInicio>
+			<horaFin>10:10</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>10:10</horaInicio>
+			<horaFin>11:00</horaFin>
+			<asignatura>Entornos de Desarrollo</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>11:25</horaInicio>
+			<horaFin>12:15</horaFin>
+			<asignatura>Formación y Orientación Laboral</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>12:15</horaInicio>
+			<horaFin>13:05</horaFin>
+			<asignatura>Bases de Datos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>13:05</horaInicio>
+			<horaFin>13:55</horaFin>
+			<asignatura>Bases de Datos</asignatura>
+		</Hora>		
+	</dia>
+	<dia diasemana="Jueves">
+		<Hora>
+			<horaInicio>08:30</horaInicio>
+			<horaFin>09:20</horaFin>
+			<asignatura>Sistemas Informáticos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>09:20</horaInicio>
+			<horaFin>10:10</horaFin>
+			<asignatura>Sistemas Informáticos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>10:10</horaInicio>
+			<horaFin>11:00</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>11:25</horaInicio>
+			<horaFin>12:15</horaFin>
+			<asignatura>Programación</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>12:15</horaInicio>
+			<horaFin>13:05</horaFin>
+			<asignatura>LMSGI</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>13:05</horaInicio>
+			<horaFin>13:55</horaFin>
+			<asignatura>LMSGI</asignatura>
+		</Hora>		
+	</dia>
+	<dia diasemana="Viernes">
+		<Hora>
+			<horaInicio>08:30</horaInicio>
+			<horaFin>09:20</horaFin>
+			<asignatura>Entornos de Desarrollo</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>09:20</horaInicio>
+			<horaFin>10:10</horaFin>
+			<asignatura>Bases de Datos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>10:10</horaInicio>
+			<horaFin>11:00</horaFin>
+			<asignatura>Bases de Datos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>11:25</horaInicio>
+			<horaFin>12:15</horaFin>
+			<asignatura>Formación y Orientación Laboral</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>12:15</horaInicio>
+			<horaFin>13:05</horaFin>
+			<asignatura>Sistemas Informáticos</asignatura>
+		</Hora>
+		<Hora>
+			<horaInicio>13:05</horaInicio>
+			<horaFin>13:55</horaFin>
+			<asignatura>Sistemas Informáticos</asignatura>
+		</Hora>		
+	</dia>
+</HorarioEscolar>
+

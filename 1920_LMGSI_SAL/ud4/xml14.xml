@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!-- EL DTD -->
+<!DOCTYPE catalogo [
+	<!ELEMENT catalogo (portatil*)>
+	<!ELEMENT portatil (referencia,nombre,fabricante,procesador,ram,disco,pantalla,grafica,foto+)>
+	<!ELEMENT referencia (#PCDATA)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT fabricante EMPTY>
+	<!ATTLIST fabricante nombre (LENOVO | HP | MSI | APPLE | ASUS | DELL | DESCONOCIDO) #REQUIRED>
+	<!ELEMENT procesador (nombreProcesador,cache,numero,velocidad)>
+	<!ELEMENT nombreProcesador ANY>
+	<!ELEMENT cache (#PCDATA)>
+	<!ELEMENT numero (#PCDATA)>
+	<!ELEMENT velocidad (#PCDATA)>
+	<!ATTLIST cache tamanyo (Mb | Gb | Tb) "Gb">
+	<!ATTLIST velocidad medida CDATA #FIXED "Ghz">
+	<!ELEMENT ram (memoria,tipo)>
+	<!ELEMENT memoria (#PCDATA)>
+	<!ELEMENT tipo (#PCDATA)>
+	<!ATTLIST memoria unidaddemedida (Mb | Gb | Tb) "Gb">
+	<!ELEMENT disco EMPTY>
+	<!ATTLIST disco tipo (SSD | HDD) #REQUIRED>
+	<!ATTLIST disco capacidad (Mb | Gb | Tb) "Gb">
+	<!ELEMENT pantalla (dimension,resolucion)>
+	<!ELEMENT dimension (#PCDATA)>
+	<!ELEMENT resolucion (#PCDATA)>
+	<!ATTLIST resolucion resolucionmaxima CDATA #IMPLIED>
+	<!ELEMENT grafica (#PCDATA)>
+	<!ELEMENT foto (imagen*)>
+	<!ELEMENT imagen (#PCDATA)>
+]>
+
+
+<!-- EL XML -->
+<catalogo>
+	<portatil>
+		<referencia>DA02040</referencia>
+		<nombre>HP 15-DA0204NS</nombre>
+		<fabricante nombre="HP"></fabricante>
+		<procesador>
+			<nombreProcesador>CORE I3-7020U</nombreProcesador>
+			<cache tamanyo="Gb">2.3</cache>
+			<numero>2</numero>
+			<velocidad medida="Ghz">2.3</velocidad>
+		</procesador>
+		<ram>
+			<memoria unidaddemedida="Gb">8</memoria>
+			<tipo>DDR4</tipo>
+		</ram>
+		<disco tipo="SSD" capacidad="Gb"></disco>
+		<pantalla>
+			<dimension>15.6</dimension>
+			<resolucion resolucionmaxima="1366x768">1266x768</resolucion>
+		</pantalla>
+		<grafica>Intel UHD Graphics 620</grafica>
+		<foto>
+			<imagen></imagen>
+		</foto>
+	</portatil>
+	<portatil>
+		<referencia>LE14584</referencia>
+		<nombre>LENOVO IDEAPAD</nombre>
+		<fabricante nombre="LENOVO"></fabricante>
+		<procesador>
+			<nombreProcesador>CORE I3-7020U</nombreProcesador>
+			<cache tamanyo="Gb">2.1</cache>
+			<numero>3</numero>
+			<velocidad medida="Ghz">2.1</velocidad>
+		</procesador>
+		<ram>
+			<memoria unidaddemedida="Gb">8</memoria>
+			<tipo>DDR4</tipo>
+		</ram>
+		<disco tipo="SSD" capacidad="Gb"></disco>
+		<pantalla>
+			<dimension>15.6</dimension>
+			<resolucion resolucionmaxima="1366x768">1266x768</resolucion>
+		</pantalla>
+		<grafica>Intel UHD Graphics 620</grafica>
+		<foto>
+			<imagen></imagen>
+		</foto>
+	</portatil>
+</catalogo>

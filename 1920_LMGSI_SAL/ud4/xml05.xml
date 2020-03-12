@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Enunciado ejercicio -->
+<!-- continente-> Europa,America,Asia -->
+<!-- pais-> Alemania,Argentina,Bahamas,Afganistan,Arabia Saudita -->
+<!-- capital-> Berlin,Buenos Aires,Nassau,Kabul,Riad -->
+<!-- capital es un atributo de pais -->
+
+
+<!-- HACEMOS PRIMERO EL DTD -->
+<!DOCTYPE mundo [
+	<!ELEMENT continente (nombrecontinente, pais*)>
+	<!ELEMENT nombrecontinente (#PCDATA)>
+	<!ELEMENT pais (#PCDATA)>
+	<!ELEMENT mundo (continente+)>
+	<!ATTLIST pais capital CDATA #REQUIRED>
+]>
+
+
+<mundo>
+	<continente>
+		<nombrecontinente>Europa</nombrecontinente>
+		<pais capital="Berlin">Alemania</pais>
+	</continente>
+	<continente>
+		<nombrecontinente>América</nombrecontinente>
+		<pais capital="Buenos Aires">Argentina</pais>
+		<pais capital="Nassau">Bahamas</pais>
+	</continente>
+	<continente>
+		<nombrecontinente>Asia</nombrecontinente>
+		<pais capital="Kabul">Afganistán</pais>
+		<pais capital="Riad">Arabia Saudita</pais>
+	</continente>
+	<continente>
+		<nombrecontinente>Africa</nombrecontinente>
+	</continente>
+</mundo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 13 de febrero de 2020 -->
+
+<!-- Enunciado ejercicio -->
+<!-- Esquema xml15: Uso de todos los elementos de libre eleccion -->
+
+<!-- Elementos Simples: -->
+
+<!-- Elementos Complejos: -->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" > 
+	<xs:element name="floristeria">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pedido" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="fecha" type="xs:date"/>
+							<xs:element name="numeropedido" type="xs:integer"/>
+							<xs:element name="cliente">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="nombre" type="xs:string"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="envio_benavente" type="xs:boolean" default="true"/>
+							<xs:element name="direccion" type="xs:string"/>
+							<xs:element name="codigopostal" type="xs:string"/>
+							<xs:element name="telefono" type="xs:string"/>
+							<xs:element name="regalo" type="xs:string" fixed="margaritas"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
