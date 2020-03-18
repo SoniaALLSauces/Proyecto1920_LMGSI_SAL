@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- Autor: Sonia Anton Llanes -->
+<!-- Fecha: 17 de marzo de 2020 -->
+
+<!-- Esquema Xsd04 UD05 -->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+<!-- Elementos Simples: -->
+<xs:simpleType name="tipoCodigo">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[A-Z][0-9][0-9]"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="valorIntensidad">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="suave"/>
+		<xs:enumeration value="moderada"/>
+		<xs:enumeration value="fuerte"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="valorNivel">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="infantil"/>
+		<xs:enumeration value="adultos"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<!-- Elementos Complejos: -->
+	<xs:element name="actividades">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="actividad" minOccurs="0" maxOccurs="20">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codigo" type="tipoCodigo"/>
+							<xs:element name="titulo" type="xs:string"/>
+							<xs:element name="fecha_inicio" type="xs:date"/>
+							<xs:element name="sesiones" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="minutos_sesion" type="xs:integer" maxOccurs="120" default="60"/>
+										<xs:element name="sesiones_semana" type="xs:integer"/>
+									</xs:sequence>
+									<xs:attribute name="intensidad" type="valorIntensidad"/>									
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>						
+						<xs:attribute name="nivel" type="valorNivel"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
