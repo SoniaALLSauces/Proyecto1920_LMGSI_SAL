@@ -9,22 +9,32 @@
 header{
 }
 h1{
-    background-color: grey;
+    background-color: silver;
     color: green;
 }
 h2{
     background-color: green;
-    color: grey;
+    color: silver;
 }
 
 h3{
-    border: 1px solid greenyellow;
+    border: 2px solid greenyellow;
     color: green;
+    padding-left: 20px;
 }
 
 table{
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+caption{
+    caption-side: bottom;
+    color: green;
+    text-align: center;
 }
 tr{
-    
+    border-color: grey;
+    border-width: 1px;
 }
+

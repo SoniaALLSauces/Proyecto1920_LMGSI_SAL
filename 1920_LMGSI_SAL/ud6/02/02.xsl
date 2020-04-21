@@ -16,8 +16,8 @@
             <head>
                 <meta charset="utf-8"/>
                 <title>XSLT 02 - Sonia Antón Llanes</title>
-                <link href="02estilo.css" rel="stylesheet" type="text/css" />
-                <link rel="icon" href="../icon/icono.png" type="image/x-icon" />
+                <link href="estilo.css" rel="stylesheet" type="text/css" />
+                <link rel="icon" href="../../icon/icono.png" type="image/x-icon" />
             </head>
             <body>
                 <header>
