@@ -23,7 +23,7 @@
 		<fecha>2020-02-18</fecha>
 		<numeropedido>02</numeropedido>
 		<cliente nombre="Margarita Perez">11452865</cliente>
-		<envio_benavente/>false</envio_benavente/>
+		<envio_benavente>false</envio_benavente>
 		<direccion>avd/ Los Fresnos, 14</direccion>
 		<codigopostal>49100</codigopostal>
 		<telefono>698745213</telefono>

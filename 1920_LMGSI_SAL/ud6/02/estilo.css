@@ -1,0 +1,30 @@
+/* 
+    Autor .- Sonia Anton Llanes
+    Fecha.- Martes 21 de abril de 2020
+    Descripcion .- Estilo 02.xml
+   
+*/
+
+
+header{
+}
+h1{
+    background-color: grey;
+    color: green;
+}
+h2{
+    background-color: green;
+    color: grey;
+}
+
+h3{
+    border: 1px solid greenyellow;
+    color: green;
+}
+
+table{
+    width: 100%;
+}
+tr{
+    
+}
