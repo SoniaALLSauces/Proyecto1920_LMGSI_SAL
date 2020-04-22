@@ -34,4 +34,50 @@
         </producto>	
         <total>2.00</total>
     </ticket>
+    <ticket>
+        <numero>7485</numero>
+        <fecha>2012-01-23</fecha>
+        <hora>13:02:18</hora>
+        <producto>
+            <nombre>Cerveza</nombre>
+            <precio>0.95</precio>
+        </producto>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <producto>
+            <nombre>Cerveza</nombre>
+            <precio>0.95</precio>
+        </producto>	
+        <total>2.90</total>
+    </ticket>
+    <ticket>
+        <numero>7486</numero>
+        <fecha>2012-01-23</fecha>
+        <hora>14:23:28</hora>
+        <producto>
+            <nombre>Agua</nombre>
+            <precio>0.60</precio>
+        </producto>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <producto>
+            <nombre>Cerveza</nombre>
+            <precio>0.95</precio>
+        </producto>	
+        <total>2.55</total>
+    </ticket>
+    <ticket>
+        <numero>7487</numero>
+        <fecha>2012-01-24</fecha>
+        <hora>12:32:09</hora>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <total>1.00</total>
+    </ticket>
 </listatickets>	

@@ -55,6 +55,10 @@
                     </xsl:for-each>
                 </section>
             </body>
+            <footer>
+                <p>NÚMERO DE TICKETS: <xsl:value-of select="count(ticket)"/></p>
+                <p>TOTAL DE TICKETS: <xsl:value-of select="sum(ticket/total)"/></p>
+            </footer>
         </html>
     </xsl:template>
 
