@@ -49,5 +49,8 @@ div.titulo{
     font-weight: bold;
     margin-bottom: 5%;
 }
-
+div span{
+    color: orange;
+    font-size: large;
+}
 
