@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 abr. 2020, 19:47:42
+    Author     : Sonia Antón Llanes
+    Descripcion: Estilo 03.xml Peliculas
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header{
+}
+h1{
+    background-color: grey;
+    color: white;
+    text-align: center;
+    width: 100%;
+} 
+body{
+    background-image: url("./images/cine.jpg");
+    background-size:100px;
+    background-repeat:repeat;
+    /*background-attachment:fixed;*/
+}
+
+article{
+    width: 30%;
+    height: 100px;
+    display:inline-block;
+    border: 1px solid black;
+    padding: 1%;
+    margin: 1%;
+    background-color: #F1EFEE;
+}
+article p{
+    text-align: center;
+}
+.titulo{
+    font-weight: bold;
+}
+
+
