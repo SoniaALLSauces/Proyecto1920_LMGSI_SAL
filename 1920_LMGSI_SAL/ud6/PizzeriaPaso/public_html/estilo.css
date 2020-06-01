@@ -1,0 +1,320 @@
+/* 
+    Autor: HeavyAfternoon
+    Fecha creación: 20/07/2020
+    Última modificación: 22/07/2020
+    Índice: 
+        1. Reglas de reseteo y posicionamiento generales
+        2. Reglas de estilo generales
+        3. Maquetación con grid
+        4. Aperitivos
+        5. Bebidas y postres
+        6. Footer
+        7. Header
+        8. Pizza del día
+        9. Pizzas
+        10. Hovers, transformaciones y transiciones
+    Aclaraciones:
+        Todos los elementos y propiedades css están ordenadas por orden alfabético
+        para facilitar su búsqueda y la correción o actualización de código posterior.
+    Mejoras pendientes:
+        --> El footer está mal centrado
+        --> Las imágenes de postres y bebidas se escapan de su contenedor
+            cuando hacemos zoom out
+    Versiones:
+        20/07/2020.- Creación de la página web en base al prototipo propuesto (HeavyAfternoon).
+        22/07/2020.- Añadido slider en el apartado aperitivos (La Banda del Patio).
+        22/07/2020.- Añadido un comentario para controlar el versionado del
+                    documento y ordenación del código para facilitar su actualización
+                    (Heavy Afternoon).
+*/
+
+/* 1. REGLAS DE RESETEO Y POSICIONAMIENTO GENERALES */
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    padding: 10px;
+}
+body>div, header, footer {
+    padding:5px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+ul {
+    list-style: none;
+    padding: 5px;
+}
+
+/* 2. REGLAS DE ESTILO GENERALES*/
+body {
+    background-color: #c39c5c;
+    padding: 10px;
+}
+body>div, header, footer {
+    background-color: white;
+    padding:5px;
+}
+h1, h2, h3 {
+    text-transform: uppercase;   
+}
+
+/* 3. REGLAS DE MAQUETACIÓN CON GRID */
+body {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+        "header pizza-del-dia pizza-del-dia"
+        "pizzas pizza-del-dia pizza-del-dia"
+        "pizzas aperitivos postres"
+        "pizzas aperitivos bebidas"
+        "pizzas footer footer"
+    ;
+    grid-template-columns: auto 30% 30%;
+    grid-template-rows: 10% auto 25% 25% 15%;
+}
+.aperitivos {
+    grid-area: aperitivos;
+}
+.bebidas {
+    grid-area: bebidas;
+}
+footer {
+    grid-area: footer;
+}
+header {
+    grid-area: header;
+}
+.pizza-del-dia {
+    grid-area: pizza-del-dia;
+}
+.pizzas {
+    grid-area: pizzas;
+}
+.postres {
+    grid-area: postres;
+}
+
+/* 4. APERITIVOS */
+.aperitivos {
+    display: flex;
+    flex-direction: column;
+}
+.aperitivos div {
+    align-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+}
+.aperitivos img {
+    height: auto;
+    width: 34%;
+}
+
+/* 5. BEBIDAS Y POSTRES */
+.bebidas {
+    display: flex;
+    flex-direction: column;
+}
+.bebidas div {
+    align-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+}
+.bebidas img {
+    height: auto;
+    width: 30%;
+}
+.postres {
+    display: flex;
+    flex-direction: column;
+}
+.postres div {
+    align-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+}
+.postres img {
+    height: auto;
+    width: 30%;
+}
+
+/* 6. FOOTER */
+/*Posicionamiento*/
+footer {
+    display: flex;
+    flex-direction: column;
+}
+footer>div {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+footer>div>div {
+    width: 60%;
+}
+footer img {
+    width: 10%;
+    height: auto;
+    padding: 0px 5px;   
+}
+/*Estilo*/
+footer p {
+    font-size: 0.9em;
+}
+
+/* 7. HEADER */
+/*Posicionamiento*/
+h1 {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+header img {
+    width: 95px;
+}
+/*Estilo*/
+h1 {
+    text-align: center;
+}
+
+/* 8. PIZZA DEL DÍA */
+/*Posicionamiento*/
+.pizza-del-dia {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.pizza-del-dia div, .pizza-del-dia h2 {
+    width: 30%;
+}
+.pizza-del-dia h4 {
+    padding-bottom: 5px;
+    width: 100%;
+}
+.pizza-del-dia p {
+    margin: 5px;
+}
+.pizza-del-dia ul {
+    width: 100%;
+}
+.pizza-del-dia li{
+    width: 100%;
+}
+/*Estilo*/
+h2 {
+    font-size: 3em;
+}
+.pizza-del-dia h4 {
+    font-size: 1.8em;
+    text-align: right;
+}
+.pizza-del-dia p {
+    font-size: 1.5em;
+    text-align: right;
+}
+.pizza-del-dia ul {
+    font-size: 1.3em;
+}
+.pizza-del-dia li{
+    text-align: right;
+}
+
+/* 9. PIZZAS */
+/*Posicionamiento*/
+.pizzas {
+    display: flex;
+    flex-direction: column;
+}
+.pizzas>div {
+    align-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+}
+.pizzas>div>div {
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    justify-content: center;
+    width: 45%;
+}
+/*Estilo*/
+.pizzas h3 {
+    font-size: 1.3em;
+}
+.pizzas h4 {
+    font-size: 1.5em;
+}
+
+/* 10. HOVERS, TRANSFORMACIONES Y TRANSICIONES */
+/*Pizzas*/
+.deslizante {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.deslizante img {
+    height: auto;
+    position: absolute;
+    transition: transform 2s;
+    width: 100%;
+}
+.deslizante:hover img{
+    transform: translate(55%);
+}
+.deslizante:hover .texto {
+    opacity: 1;
+}
+/*Pizza del día*/
+.pizza-del-dia img {
+    transition: all 15s;
+}
+.pizza-del-dia img:hover {
+    transform: rotate(360deg);
+}
+.texto {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 3s;
+    width: 55%;
+}
+.texto p {
+    font-size: 1.3em;
+    margin: 5px;
+    text-align: right;
+}
+/*Aperitivos*/
+.slider {
+    animation: carrusel-infinito 20s infinite 2s alternate ease-out;
+    background: url(images/entrante1.png) no-repeat center;
+    background-size: contain;
+    height: 512px;
+    margin: auto;
+    -webkit-animation: carrusel-infinito 20s infinite 2s alternate ease-out;
+    width: 512px;
+}
+@keyframes carrusel-infinito {
+    0%, 16.6% { background-image: url(images/entrante1.png); }
+    16.6%, 33.2% { background-image: url(images/entrante2.png); }
+    33.2%, 49.8% { background-image: url(images/entrante3.png); }
+    49.8%, 66.4% { background-image: url(images/entrante4.png); }
+    66.4%, 83.06% { background-image: url(images/entrante5.png); }
+    83.06%, 100% { background-image: url(images/entrante6.png); } 
+}

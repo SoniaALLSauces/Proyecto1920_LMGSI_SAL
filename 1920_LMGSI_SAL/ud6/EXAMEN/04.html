@@ -1,0 +1,104 @@
+
+        <!--
+    Document   : 04.xml
+    Created on : 30 de marzo de 2020, 23:34
+    Modified on: 7 de mayo de 2020, 12:15
+    Author     : Sonia Anton Llanes
+    Description:
+        Examen 04 de LMSGI, contiene la documentacion de instalacion de un servicio
+--><!DOCTYPE html><html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SoniaALl: Servidor Web de Ubuntu</title>
+        <meta charset="utf-8">
+        <link href="estilo.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../../icon/icono.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <h1>
+                UBU18<span></span>Servidor Web en Ubuntu
+            </h1>
+        </header>
+        <main>
+            <h4>Manual de instalaci&oacute;n y configuraci&oacute;n de Apache2</h4>
+            <section>
+                <p>
+                    <span>Date created/update: </span>2020-03-31
+                </p>
+                <p>
+                    <span>Sistema Operativo: </span>Ubuntu Server18.04
+                </p>
+                <p>
+                    <span>Arquitectura: </span>x64
+                </p>
+                <p>
+                    <span>Documentaci&oacute;n: </span>
+                    <ul>
+                        <li>http://ubuntu.com</li>
+                        <li>https://wiki.ubuntu.com</li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <p class="pasos">Pasos a seguir</p>
+                <article>
+                    <p>
+                        <span class="PNum">P01</span>
+                                     Paso 
+                                
+                    </p>
+                    <p class="sudo">sudo apt update</p>
+                    <p>Actualizaci&oacute;n del repositorio</p>
+                </article>
+                <article>
+                    <p>
+                        <span class="PNum">P02</span>
+                                     Paso 
+                                
+                    </p>
+                    <p class="sudo">sudo apt install apache2</p>
+                    <p>Instalaci&oacute;n del servidor HTTP Apache2</p>
+                </article>
+                <article>
+                    <p>
+                        <span class="PNum">P03</span>
+                                     Paso 
+                                
+                    </p>
+                    <p class="sudo">sudo service apache2 status</p>
+                    <p>Comprobaci&oacute;n del estado del servicio</p>
+                </article>
+                <article>
+                    <p>
+                        <span class="PNum">P04</span>
+                                     Paso 
+                                
+                    </p>
+                    <p class="sudo">sudo adduser --home /var/www/html --group www-data operadorweb</p>
+                    <p>Creaci&oacute;n del usuario operadorweb</p>
+                </article>
+                <article>
+                    <p>
+                        <span class="PNum">P05</span>
+                                     Paso 
+                                
+                    </p>
+                    <p class="sudo">sudo chmod -R 2775 /var/www/html</p>
+                    <p>Cambiar los permisos de forma recursiva al directorio html, de forma que el usuario tenga 
+            todos los permisos, el grupo tenga todos los permisos y el resto lectura y ejecuci&oacute;n
+        </p>
+                </article>
+                <article>
+                    <p>
+                        <span class="PNum">P06</span>
+                                     Paso 
+                                
+                    </p>
+                    <p class="sudo">sudo chown -R operadorweb:www-data /var/www/html</p>
+                    <p>Cambiar el propietario de la carpeta html</p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

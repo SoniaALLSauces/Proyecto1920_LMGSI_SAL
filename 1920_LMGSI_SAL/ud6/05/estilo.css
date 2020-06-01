@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 may. 2020, 14:01:49
+    Author     : Sonia
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+h1{
+    background-color: steelblue;
+    color: white;
+    font-family: lucida handwriting;
+    font-variant: small-caps;
+    width: 100%;
+    padding-left: 20px;
+} 
+
+table{
+    width: 100%;
+}
+th{
+    background-color: steelblue;
+    color: white;
+    font-family: lucida handwriting;
+    width: 50%;
+}
+td p{
+    text-align: center;
+    font-family: lucida handwriting;
+    font-size: x-small;
+}
+img{
+    display: block;
+    margin: auto;
+}

@@ -35,9 +35,15 @@
                                 <div class="titulo"><xsl:value-of select="nombre"/></div>
                                 <div>Puntuación:
                                     <xsl:choose>
-                                        <xsl:when test="valoracion/@puntos&lt;5">***</xsl:when>
-                                        <xsl:when test="valoracion/@puntos&gt;=5 and valoracion/@puntos&lt;7">*****</xsl:when>
-                                        <xsl:otherwise>*******</xsl:otherwise>
+                                        <xsl:when test="valoracion/@puntos&lt;5">
+                                            <span>***</span>
+                                        </xsl:when>
+                                        <xsl:when test="valoracion/@puntos&lt;7">
+                                            <span>*****</span>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <span>*******</span>
+                                        </xsl:otherwise>
                                     </xsl:choose>
                                 </div>
                                 <div>Dirigida a: <xsl:value-of select="publico"/></div>

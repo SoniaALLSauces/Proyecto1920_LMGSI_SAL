@@ -1,0 +1,59 @@
+/* 
+    Created on : 31 may. 2020, 14:01:49
+    Author     : Sonia
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+﻿
+header{
+    position: relative;
+}
+h1{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main>div{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin: 1%;
+}
+a{
+    position: relative;
+    height: 300px;
+
+}
+img{
+    position: absolute;
+    border: 2px solid grey;
+    margin-left: 15%;
+}
+.bg{
+    z-index: -1;
+}
+h4{
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 5px;
+}
+p{
+    background-color: grey;
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 may. 2020, 12:41:29
+    Author     : Sonia Antón Llanes
+    Descripcion: Estilo EXAMEN 04
+*/
+
+* { box-sizing: border-box; margin:0px; padding:0px;}
+ul, ol {list-style: none; }
+a{text-decoration: none; color:#000; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header{
+}
+h1,h4 {
+    color: darkred;
+    width: 99%;
+    border: 1px solid darkred;
+    padding: 5px;
+    margin: 2px;
+}
+h1 span{
+    margin-right: 3px;
+}
+p span{
+    width: 94%;
+    padding: 5px;
+    margin-left: 4%;
+    color: darkred;
+    font-weight: bold;
+    font-variant: small-caps; 
+}
+.pasos{
+    color: darkred;    
+}
+.pasos{
+    width: 94%;
+    padding: 5px;
+    margin-left: 4%;
+    color: darkred;
+    font-size: large;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+article{
+    width: 94%;
+    border: 1px solid darkred;
+    padding: 5px;
+    margin: 2px;
+    margin-left: 4%;
+}
+article p{
+    margin: 2px;
+}
+.PNum{
+    color: white;
+    background-color: darkred;
+    border-radius: 10px;
+}
+.sudo{
+    color: white;
+    background-color: darkred;
+    text-align: center;
+}
+
+
+
